@@ -3,29 +3,22 @@
 
 // Chiedo una parola all'utente
 let userWord = prompt('Dimmi una parola')
-// Definisco le variabili e gli arrays
-let reversedArray = []
-let normalArray = []
-let reversedWord = reversedArray.join('')
-let word = normalArray.join('')
+// Definisco la variabile reversedWord dove andra' la parola al contrario
+let reversedWord = ''
 
-// Scorro tutti i caratteri di userWord al contrario e li inserisco in reversedArray
+
+// Scorro tutti i caratteri di userWord al contrario e li inserisco in una stringa chiamata reversedWord
 for (let i = userWord.length - 1; i >= 0; i--) {
-    reversedWord = reversedArray.push(userWord[i])
+    const thisLetter = userWord[i]
+    reversedWord += thisLetter
 }
-console.log(reversedArray)
-
-// Scorro tutti i caratteri di userWord ner ''verso giusto'' e li inserisco in normalArray
-for (let i = 0; i < userWord.length; i++) {
-    word = normalArray.push(userWord[i])
-}
-console.log(normalArray)
+console.log(reversedWord)
 
 // Tramite la funzione scopro se userWord è un palindromo :
-    // Se word === reversedWord, è un palindromo
+    // Se userWord === reversedWord, è un palindromo
     // Altrimenti no
 function myFunction() {
-    if (word === reversedWord) {
+    if (userWord === reversedWord) {
         alert('La parola è un palindromo')
     } else {
         alert('La parola non è un palindromo')
